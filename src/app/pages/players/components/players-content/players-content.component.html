@@ -1,0 +1,42 @@
+<div class="container">
+
+<div class="search">
+  <div class="search_name">
+    <label for="searchName">Search by Name...</label>
+    <input type="text"
+    class="search_input"
+    placeholder="Search by name..."
+    #txtSearch
+    (keyup)="onSearchPlayer(txtSearch.value)"/>
+  </div>
+</div>
+
+  <div class= "card" *ngFor="let player of playersList |filter:page:search">
+
+
+    <img src="https://escritosguzman.files.wordpress.com/2020/06/fde8a73f-2bc5-4ce2-8ff0-52892dc69aa8.jpg" alt="imagen">
+
+
+    <h3>{{player.first_name}} {{player.last_name}}</h3>
+
+    <p>Position: {{player.position}}</p>
+    <h2>Team: {{player.team.name}}</h2>
+    <p>City: {{player.team.city}}</p>
+    <p>Conference: {{player.team.conference}}</p>
+
+  </div>
+  </div>
+
+
+  <button class="btn-second"
+  (click)="nextPage()"
+  [disabled]="(playersList |filter:page:search).length===0">
+    Siguentes
+  </button>
+  &nbsp;
+  <button class="btn-primary"
+  (click)="prevPage()">
+  Anteriores
+  </button>
+
+

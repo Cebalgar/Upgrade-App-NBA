@@ -1,0 +1,28 @@
+
+.section{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 8px;
+
+  h1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    color:rgb(28,65,137);
+  }
+  h2{
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    color:rgb(28,65,137);
+    font-weight: lighter;
+  }
+  video {
+
+    border-radius: 10px;
+    width: 80%;
+    height: 400px;
+  }
+
+}

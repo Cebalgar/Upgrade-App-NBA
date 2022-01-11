@@ -1,0 +1,21 @@
+<div class="container">
+  <div class= "card" *ngFor="let game of games | paginate: { itemsPerPage: 10, currentPage: page} ">
+
+
+    <h2>{{game.home_team.full_name}} <span class="vs">vs</span> {{game.visitor_team.full_name}}</h2>
+
+    <p><span>Season:</span> {{game.season}}</p>
+    <p><span>Team Score:</span>  {{game.home_team_score}}<p>
+    <p><span>Visitor Team Score:</span> {{game.visitor_team_score}}</p>
+
+
+  </div>
+  </div>
+
+<div class=page>
+  <pagination-controls
+  (pageChange)="page = $event"
+  previousLabel="Anterior"
+  nextLabel="Siguiente">
+</pagination-controls>
+</div>

@@ -1,0 +1,58 @@
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px;
+  padding: 20px;
+
+
+  .card{
+
+    justify-content:center;
+    border: 8px solid rgb(28,65,137);
+    border-radius:40px;
+    padding:14px;
+    align-items: center;
+    margin:20px;
+    width:500px;
+    height:300px;
+
+
+      h2{
+        justify-content:center;
+        text-align: center;
+        font-weight:600;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color:rgb(230, 62, 62);
+        font-size:xx-large;
+        .vs{
+
+          color:rgb(28,65,137);
+
+        }
+
+      }
+
+      p{
+        justify-content:center;
+        text-align: left;
+        font-weight:500;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color:rgb(28,65,137);
+        font-size:large;
+        span{
+        justify-content:center;
+        text-align: left;
+        font-weight:600;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color:rgb(28,65,137);
+        font-size:large;
+
+        }
+      }
+    }
+  }
+
+  .page{
+    float:right;
+    margin:20px;
+  }

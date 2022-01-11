@@ -1,0 +1,36 @@
+<div class="container">
+
+  <div class="search">
+    <div class="search_name">
+      <label for="searchName">Search by Name...</label>
+      <input type="text"
+      class="search_input"
+      placeholder="Search by name..."
+      #txtSearch
+      (keyup)="onSearchTeam(txtSearch.value)"/>
+    </div>
+  </div>
+
+  <div class= "card" *ngFor="let team of teams | buscar:page:search">
+    <div class="cartel">
+      <img src="https://www.nbamaniacs.com/wp-content/uploads/2016/10/mapa-NBA.jpg" alt="imagen">
+  </div>
+
+    <h1>{{team.full_name}}</h1>
+    <h2>{{team.abbreviation}}</h2>
+    <p>City: {{team.city}}</p>
+    <p>Conference: {{team.conference}}</p>
+    <p>Division: {{team.division}}</p>
+
+  </div>
+  </div>
+  <button class="btn-second"
+  (click)="nextPage()"
+  [disabled]="(teams | buscar:page:search).length === 0">
+    Siguentes
+  </button>
+  &nbsp;
+  <button class="btn-primary"
+  (click)="prevPage()">
+  Anteriores
+  </button>
